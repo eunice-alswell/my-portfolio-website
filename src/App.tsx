@@ -1,8 +1,14 @@
-import React from 'react'
-import {link} from 'react-router-dom'
+import "./App.css"
+import { BrowserRouter } from "react-router-dom"
+import Router from "./Router"
+import MainLayout from "./Layout/MainLayout"
 
 export default function App() {
   return (
-    <div>App</div>
+    <BrowserRouter>
+      <MainLayout>
+        <Router />
+      </MainLayout>
+    </BrowserRouter>
   )
 }
