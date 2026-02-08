@@ -36,7 +36,7 @@ export const categoryColors: categoryColorsType = {
   "mobile-development": "from-orange-500 to-red-500"
 };
 
-export const categoryLabels = {
+export const categoryLabels: { [key: string]: string } = {
   "data-science": "Data Science",
   "ml-ai": "ML & AI",
   "web-development": "Web Development",
@@ -102,3 +102,4 @@ export const education = [
     details: "Graduated with Second Class Honor(Upper Division, GPA: 3.67), focusing on software development and data analysis."
   }
 ];
+

@@ -46,7 +46,9 @@ export default function Navbar() {
     <header className="fixed top-0 w-full z-50 glass-effect py-4">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between">
-          <Link to="/">Logo</Link>
+          <Link to="/">
+            <img src="/eunice-alswell-gyau-logo.png" alt="Logo" className="w-10 h-10 object-cover" />
+          </Link>
           <div>
             <Navigations/>
           </div>

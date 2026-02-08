@@ -27,7 +27,7 @@ export default function CTA() {
                   Contact Me
                 </Button>
               </Link>
-              <a href = "https://www.linkedin.com/in/eunice-alswell-gyau/" target="_blank">
+              <a href = "https://github.com/eunice-alswell" target="_blank">
                 <Button size="lg" className="px-8 py-4 text-lg bg-linear-to-r from-blue-600 to-purple-600 hover-lift border-2 border-white text-white hover:bg-white hover:text-blue-600">
                   <Github className="mr-2 w-5 h-5" />
                   View GitHub

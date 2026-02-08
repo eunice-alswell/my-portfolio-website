@@ -6,7 +6,9 @@ export default function Footer() {
     <footer className="bg-slate-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="block lg:flex items-center justify-center text-2xl font-bold text-gradient mb-4">
-            <Link to="/">Logo</Link>
+            <Link to="/">
+              <img src="/eunice-alswell-gyau-logo.png" alt="Logo" className="w-10 h-10 object-cover inline-block mr-2" />
+            </Link>
             <span className="mx-2 hidden lg:inline">|</span>
             <p className="mx-2">Eunice Alswell Gyau</p>
           </div>

@@ -62,3 +62,12 @@ export interface ProjectDetailProps extends ProjectPreviewProps {
     }[];
     futureImprovements?: string[];
 }
+
+export interface BlogPost {
+    title: string;
+    link: string;
+    pubDate: string;
+    thumbnail?: string;
+    description: string;
+    categories: string[];
+}

@@ -26,7 +26,7 @@ export default function ProjectCard({
             </div>
         )}
         {/* Project image */}
-        <Link to={`ProjectDetail?id=${project.projectId}`} className="group">
+        <Link to={`/projects/${project.projectId}`} className="group">
             <div className="relative h-48 overflow-hidden cursor-pointer">
             {project.image_url ? (
                 <img 
@@ -58,7 +58,7 @@ export default function ProjectCard({
                     </div>
                 )} 
             </div>
-            <Link to={`ProjectDetail?id=${project.projectId}`} className="hover:underline">
+            <Link to={`/projects/${project.projectId}`} className="hover:underline">
                 <p className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors cursor-pointer">
                     {project.title}
                 </p>
@@ -84,7 +84,7 @@ export default function ProjectCard({
                 )}
             {/* Action Buttons */}
             <div className="flex gap-2 mt-auto">
-                <Link to={`ProjectDetail?id=${project.projectId}`} className="flex-1">
+                <Link to={`/projects/${project.projectId}`} className="flex-1">
                     <Button 
                         variant="default" 
                         size="sm" 

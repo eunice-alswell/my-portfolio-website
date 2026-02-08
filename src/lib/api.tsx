@@ -1,4 +1,4 @@
-import type { ProjectPreviewProps, ProjectDetailProps, Project } from "./types"
+import type { ProjectPreviewProps, ProjectDetailProps, Project, BlogPost } from "./types"
 const baseUrl = import.meta.env.VITE_BASE_URL
 
 const projectUrl = `${baseUrl}/${import.meta.env.VITE_SHEET_ID}/projects`
@@ -166,3 +166,19 @@ export const getProjectDetail = async (projectId: string):Promise<ProjectDetailP
             }) => improvement.improvement )
     }
 }
+
+export const getBlogPosts = async (): Promise<BlogPost[]> => {
+    const mediumApiUrl = import.meta.env.VITE_MEDIUM_API_URL;
+    const res = await fetch(mediumApiUrl);
+    if (!res.ok) throw new Error('Failed to fetch blog posts');
+    const data = await res.json();
+
+    return data.items.map( (item: BlogPost) => ({
+        title: item.title,
+        link: item.link,
+        pubDate: item.pubDate,
+        thumbnail: item.thumbnail,
+        description: item.description.replace(/<[^>]*>?/gm, ""), // strip HTML
+        categories: item.categories,
+    }))
+};

@@ -90,13 +90,15 @@ export default function Home() {
                             </div> 
                             
                             <div className="flex justify-center lg:justify-start flex-wrap gap-4">
-                                <Button 
-                                    size="lg" 
-                                    className="bg-linear-to-r from-blue-600 to-violet-600 hover:border-2 hover:border-blue-800 hover:bg-white text-white px-8 py-4 text-lg hover-lift"
-                                >
-                                    <Download className="mr-2 w-5 h-5" />
-                                    Download CV
-                                </Button>
+                                <a  href="https://drive.google.com/file/d/1USXhYE-YH-8WbweMBRB3X1QiOjh-2qaB/view?usp=sharing" download="Eunice-Alswell-Gyau-Resume.pdf">
+                                    <Button 
+                                        size="lg" 
+                                        className="bg-linear-to-r from-blue-600 to-violet-600 hover:border-2 hover:border-blue-800 hover:bg-white text-white px-8 py-4 text-lg hover-lift"
+                                    >
+                                        <Download className="mr-2 w-5 h-5" />
+                                        Download CV
+                                    </Button>
+                                </a>
                                 <Link to={"/projects"}>
                                     <Button size="lg" variant="outline" className="px-8 py-4 text-lg hover-lift border-2">
                                         View My Projects
