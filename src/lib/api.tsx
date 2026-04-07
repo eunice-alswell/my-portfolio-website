@@ -16,6 +16,24 @@ const fetchData = async (url: string) =>{
     return res.json();
 }
 
+// const getCuratedProjectDescription = (project: Project): string => {
+//     const title = (project.title ?? "").toLowerCase();
+
+//     if (title.includes("mobiphleb")) {
+//         return "A healthcare booking platform that helps clients schedule home blood draw appointments, while giving providers a clear workflow for bookings and follow up.";
+//     }
+
+//     if (title.includes("adieaura")) {
+//         return "An ecommerce website powered by Google Sheets for product and inventory updates, with a simple storefront and practical admin flow for daily operations.";
+//     }
+
+//     if (title.includes("emailjs") || title.includes("whatsapp") || title.includes("business website")) {
+//         return "Business website integrations using EmailJS and WhatsApp to improve contact flow, response time, and customer communication.";
+//     }
+
+//     return project.description ?? "";
+// };
+
 export const getProjectPreviews = async ():Promise<ProjectPreviewProps[]> => {
     const [projects,technologies] = await Promise.all([
         fetchData(projectUrl),
@@ -37,9 +55,9 @@ export const getProjectPreviews = async ():Promise<ProjectPreviewProps[]> => {
 
         return {
             projectId: project.project_id,
-            title: project.title,
-            description: project.description,
-            category: project.category,
+            title: project.title ?? "",
+            description: project.description ?? "",
+            category: project.category ?? "uncategorized",
             completion_date: new Date(project.completion_date),
             image_url: project.image_url,
             demo_url: project.demo_url,

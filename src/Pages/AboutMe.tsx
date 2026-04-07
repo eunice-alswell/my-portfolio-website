@@ -20,8 +20,7 @@ export default function AboutMe() {
             About <span className="text-gradient">Me</span>
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            A passionate technologist who loves solving complex problems through the perfect 
-            blend of data science insights and robust software engineering.
+            I am a Software Engineer who builds useful systems from frontend to backend, with a strong focus on real business needs.
           </p>
         </motion.div>
 
@@ -39,18 +38,20 @@ export default function AboutMe() {
                 <h2 className="text-2xl font-bold text-slate-800 mb-6">My Journey</h2>
                 <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                   <p>
-                    Hi! I’m a data analyst with over three years of experience and a freelance full-stack developer. 
-                    My journey started with a curiosity about data and patterns, which gradually grew into an interest in 
-                    building software that turns insights into useful, real-world tools.
+                    I started in analytics, where I learned how to break down business problems and work with stakeholders. 
+                    Over time, I moved deeper into software engineering so I could build complete solutions, not only report findings.
                   </p>
                   <p>
-                    I enjoy working at the intersection of data and software — analyzing information, building systems, 
-                    and making complex ideas easier to understand and apply. I’m especially interested in creating solutions 
-                    that balance solid technical foundations with practical, user-focused design.
+                    Today I build full systems using React, React Native, NestJS, and PostgreSQL. 
+                    I care about structure, clear APIs, maintainable code, and decisions that make the product easier to scale.
                   </p>
                   <p>
-                    When I'm not coding or analyzing data, you'll find me writing technical articles, exploring the latest advances in AI and 
-                    machine learning or cooking for family or watching action movies. I’m motivated by curiosity, steady growth, and the desire to build things that genuinely make sense.
+                    My recent work includes a healthcare booking platform, a Google Sheets powered ecommerce site, and business website integrations using EmailJS and WhatsApp. 
+                    I enjoy building things people can use right away and improving them based on real feedback.
+                  </p>
+                  <p>
+                    Looking ahead, I want to keep growing as a Software Engineer while learning more about machine learning and building projects that use it in practical ways. 
+                    I will keep adding those projects here as I build them, especially where they fit into real product work and useful user experiences.
                   </p>
                 </div>
               </Card>
@@ -207,9 +208,9 @@ export default function AboutMe() {
               <Card className="p-6 glass-effect border-0 hover-lift text-center">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-slate-800 mb-2">Resume</h3>
-                  <p className="text-slate-600">Download my full resume for detailed information</p>
+                  <p className="text-slate-600">Download my full resume for more project and engineering details</p>
                 </div>
-                <a href="https://drive.google.com/file/d/1USXhYE-YH-8WbweMBRB3X1QiOjh-2qaB/view?usp=sharing" download="Eunice-Alswell-Gyau-Resume.pdf">
+                <a href="https://drive.google.com/file/d/15X2Kc6xjrELHH6frOQMPtf2IIvOfYJD7/view?usp=sharing" download="Eunice-Alswell-Gyau-Resume.pdf" target="_blank">
                   <Button 
                     className="w-full bg-linear-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700"
                   >

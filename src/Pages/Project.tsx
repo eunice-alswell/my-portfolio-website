@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Filter, Search } from "lucide-react";
@@ -8,12 +7,15 @@ import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 import { getProjectPreviews } from "@/lib/api";
 import type { ProjectPreviewProps } from "../lib/types";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 export default function Projects() {
   const [projects, setProjects] = useState<ProjectPreviewProps[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
+
+  const normalizedSearchTerm = searchTerm.trim().toLowerCase();
 
   useEffect(() => {
     const loadProjects = async () => {
@@ -28,16 +30,20 @@ export default function Projects() {
 
   const categories = [
     { id: "all", label: "All Projects", count: projects.length },
-    { id: "data-science", label: "Data Science", count: projects.filter(p => p.category === "data-science").length },
-    { id: "ml-ai", label: "ML & AI", count: projects.filter(p => p.category === "ml-ai").length },
     { id: "web-development", label: "Web Development", count: projects.filter(p => p.category === "web-development").length },
-    { id: "mobile-development", label: "Mobile Development", count: projects.filter(p => p.category === "mobile-development").length }
+    { id: "mobile-development", label: "Mobile Development", count: projects.filter(p => p.category === "mobile-development").length },
+    { id: "data-science", label: "Data and ML", count: projects.filter(p => p.category === "data-science").length },
+    { id: "ml-ai", label: "ML & AI", count: projects.filter(p => p.category === "ml-ai").length },
   ];
 
   const filteredProjects = projects.filter(project => {
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.technologies?.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
+    const title = project.title ?? "";
+    const description = project.description ?? "";
+    const technologies = project.technologies ?? [];
+
+    const matchesSearch = title.toLowerCase().includes(normalizedSearchTerm) ||
+                         description.toLowerCase().includes(normalizedSearchTerm) ||
+                         technologies.some(tech => tech.toLowerCase().includes(normalizedSearchTerm));
     const matchesCategory = activeCategory === "all" || project.category === activeCategory;
     return matchesSearch && matchesCategory;
   });
@@ -58,8 +64,7 @@ export default function Projects() {
             My <span className="text-gradient">Projects</span>
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            A showcase of data science experiments, machine learning models, and full-stack 
-            applications that solve real-world problems.
+            Products I designed and built to solve practical problems, from frontend experiences to backend services, integrations, and a few earlier data and machine learning projects.
           </p>
         </motion.div>
 
@@ -143,18 +148,7 @@ export default function Projects() {
 
             <TabsContent value={activeCategory}>
               {isLoading ? (
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {Array(6).fill(0).map((_, i) => (
-                    <Card key={i} className="animate-pulse">
-                      <div className="h-48 bg-slate-200 rounded-t-lg"></div>
-                      <CardContent className="p-6">
-                        <div className="h-4 bg-slate-200 rounded mb-4"></div>
-                        <div className="h-3 bg-slate-200 rounded mb-2"></div>
-                        <div className="h-3 bg-slate-200 rounded w-3/4"></div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+                <LoadingSpinner message="Loading projects..." />
               ) : filteredProjects.length > 0 ? (
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {filteredProjects.map((project, index) => (

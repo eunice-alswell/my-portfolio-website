@@ -57,7 +57,7 @@ export default function Home() {
                             <div className="relative lg:w-full h-[680px] rounded-3xl overflow-hidden shadow-2xl hover-lift">
                                 <img 
                                 src={EunicePhoto}
-                                alt="Eunice Alswell Gyau - Data Scientist & Developer"
+                                alt="Eunice Alswell Gyau Software Engineer"
                                 className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-linear-to-tr from-blue-600/10 to-purple-600/10"></div>
@@ -80,11 +80,11 @@ export default function Home() {
                                     <span className="text-gradient">Eunice Alswell Gyau</span>
                                 </h1>
                                 <h2 className="text-2xl lg:text-3xl font-semibold text-slate-700">
-                                    Data Scientist & Full-Stack Developer
+                                    Software Engineer
                                 </h2>
                                 <p className="text-xl text-slate-600 leading-relaxed">
-                                    I turn data into insights and build software that supports better decisions.
-                                    My focus is on clarity, thoughtful systems, and real-world impact. 
+                                    I build web and mobile products that solve real business problems.
+                                    I work across frontend, backend, APIs, and integrations with a clear focus on useful outcomes.
                                     {/* ...<a href="/about" className="text-blue-600 hover:text-blue-800">read more</a> */}
                                 </p>
                             </div> 
@@ -122,7 +122,7 @@ export default function Home() {
                         >
                             <img 
                                 src={EuniceImage} 
-                                alt="Eunice Alswell Gyau - Data Scientist & Developer" 
+                                alt="Eunice Alswell Gyau Software Engineer" 
                                 className="w-full h-[500px] object-cover rounded-3xl shadow-2xl hover-lift"
                             />
                             {/* <div className="bg-url(src\assets\Eunice-Alswell-Gyau-image-1.jpg)"></div> */}
@@ -136,10 +136,10 @@ export default function Home() {
                             {/* About Section Content Here */}
                             <h2 className="text-3xl font-bold mb-4">About Me</h2>
                             <p className="text-lg text-slate-600 leading-relaxed">
-                                I’m a data analyst with over three years of experience working with data to support decision-making, alongside freelance software development work.
+                                I am a Software Engineer with a background in analytics and practical business delivery.
                             </p>
                             <p className="text-lg text-slate-600 leading-relaxed">
-                                I enjoy building systems that combine data, software, and clear thinking — focusing on solutions that are practical, ethical, and useful in real-world settings.
+                                I build with React, React Native, NestJS, and PostgreSQL, and I enjoy thinking through system decisions from the UI down to data storage and integrations.
                             </p>
                             <div className="mt-6">
                                 <Link to={"/about"}>
@@ -185,7 +185,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold mb-6">Featured Projects</h2>
                     <p className="text-lg text-slate-600 mb-12">
-                        A selection of projects that showcase my skills in data science and software development.
+                        Real products I have built to solve practical problems in healthcare, ecommerce, and business operations.
                     </p>
                     <motion.div
                         initial={{opacity: 0, y: 40}}

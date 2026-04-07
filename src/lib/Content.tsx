@@ -5,26 +5,26 @@ import type { WhatIDoItem, categoryColorsType } from "./types";
 export const WhatIDo: WhatIDoItem[] = [
     {
         icon: ChartNoAxesCombined,
-        title: "Data Analysis",
-        description: "Analyzing data, creating dashboards, and translating data into insights that support better decision-making.",
+    title: "Frontend Engineering",
+    description: "Building responsive React interfaces that are clear, fast, and easy for users to work with.",
         color: "from-blue-500 to-purple-500"
     },
     {
         icon: CodeXml,
-        title: "Full-Stack Web Development",
-        description: "Designing and building web applications with a focus on clarity, usability, and scalable backend systems.",
+    title: "Backend and API Development",
+    description: "Designing backend services and APIs with NestJS and PostgreSQL to support real product workflows.",
         color: "from-purple-500 to-pink-500"
     },
     {
         icon: Smartphone,
-        title: "Mobile App Development",
-        description: "Developing cross-platform mobile applications using modern frameworks and clean system architecture.",
+    title: "Mobile App Development",
+    description: "Developing React Native apps that connect cleanly with backend services and support daily operations.",
         color: "from-blue-500 to-purple-500"
     },
     {
       icon: Brain,
-      title: "Machine Learning & Applied AI",
-      description: "Building and experimenting with ML models, NLP workflows, and AI-assisted systems to solve real-world problems.",
+    title: "System Integration",
+    description: "Connecting websites and products with tools like EmailJS, WhatsApp, and Google Sheets to support business tasks.",
       color: "from-purple-500 to-pink-500"
     },
 ];
@@ -37,26 +37,27 @@ export const categoryColors: categoryColorsType = {
 };
 
 export const categoryLabels: { [key: string]: string } = {
-  "data-science": "Data Science",
+  "data-science": "Data",
   "ml-ai": "ML & AI",
   "web-development": "Web Development",
   "mobile-development": "Mobile Development"
 };
 
 export const skills = {
-  "Data Science & ML": [
-    "Python", "TensorFlow", "Scikit-learn", "Pandas", "NumPy",
-    "Statistical Analysis", "NLP"
+  "Frontend Engineering": [
+    "React", "TypeScript", "JavaScript", "Tailwind CSS", "Responsive UI"
   ],
-  "Web Development": [
-    "JavaScript", "TypeScript", "React", "Node.js", "Express",
-    "MongoDB", "PostgreSQL"
+  "Backend and APIs": [
+    "NestJS", "Node.js", "Express", "PostgreSQL", "REST APIs"
   ],
   "Mobile Development": [
-    "React Native", "Firebase","cross-platform Development", "Mobile UI/UX"
+    "React Native", "Firebase", "Mobile UI", "App State Management"
   ],
-  "Tools & Technologies": [
-    "Git", "Jupyter", "VS Code", "Figma", "Tableau", "Bash"
+  "Quality and Workflow": [
+    "Git", "Postman", "Manual Testing", "QA Mindset", "Debugging"
+  ],
+  "Data and ML/AI": [
+    "Python", "Pandas", "Scikit-learn", "Data Visualization", "ML Concepts", "Power BI", "Data Modeling", "A/B Testing", "Automation"
   ]
 };
 
@@ -65,19 +66,19 @@ export const careerTimeline = [
     year: "Jan 2022 - May 2023",
     title: "Freelance Web Developer",
     company: "Self-Employed",
-    description: "Developed custom web solutions for small businesses, improving their online presence and customer engagement."
+    description: "Built and launched business websites with booking and contact flows, including EmailJS and WhatsApp integrations."
   },
   {
     year: "Jun 2023 - Present",
-    title: "Data & Digital Marketing Analyst",
+    title: "Software Developer and Data Analyst",
     company: "PHD Media Ghana Limited",
-    description: "Leveraged data analytics to optimize marketing campaigns, resulting in a 25% increase in ROI for clients."
+    description: "Designed and implemented system development, workflow automation, and AI-driven analytics solutions to optimize digital operations and media planning performance."
   },
   {
     year: "Nov 2023- Oct 2024",
-    title: "Data Analyst Trainee",
+    title: "Graduate Trainee",
     company: "Stanbic Bank Ghana LTD",
-    description: "Conducted data analysis to support business decisions, focusing on customer behavior and market trends."
+    description: "Supported reporting and process improvement projects while building stronger problem solving and delivery habits for software work."
   }
 ];
 
@@ -90,16 +91,22 @@ export const certifications = [
 
 export const education = [
   {
-    degree: "ALX Data science Program",
+    degree: "ALX Data Science Program",
     institution: "ALX Africa",
     year: "2025-Present",
-    details: "Intensive program covering data analysis, visualization, machine learning, and applied AI using Python and related tools."
+    details: "Practical training in software engineering, covering frontend and backend development, APIs, and team based delivery."
   },
   {
     degree: "B.S. in Computer Science",
     institution: "State University",
     year: "2019 - 2023",
     details: "Graduated with Second Class Honor(Upper Division, GPA: 3.67), focusing on software development and data analysis."
+  },
+  {
+    degree: "PreMest Web Development Bootcamp",
+    institution: "Soronko Academy",
+    year: "2021",
+    details: "Intensive training in web development, covering HTML, CSS, JavaScript, Reactjs and practical project work to build real websites and applications."
   }
 ];
 

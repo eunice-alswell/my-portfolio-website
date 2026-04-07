@@ -244,11 +244,11 @@ export default function Contact() {
                 <CardContent className="p-6 pt-0">
                   <div className="space-y-2">
                     {[
-                      "Data Science Consulting",
-                      "ML Model Development", 
                       "Full-Stack Web Apps",
                       "Mobile App Development",
                       "Technical Writing",
+                      "Data Science Consulting",
+                      "ML Model Development", 
                       "Code Review & Mentoring"
                     ].map((service) => (
                       <div key={service} className="flex items-center gap-2">
@@ -364,6 +364,7 @@ export default function Contact() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
+                      
                       className="w-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg py-6"
                     >
                       {isSubmitting ? (

@@ -15,6 +15,10 @@ export default function ProjectCard({
     project: ProjectPreviewProps, 
     featured?: string
 }) {
+    const projectDate = project.completion_date ? new Date(project.completion_date) : null;
+    const hasValidProjectDate = projectDate !== null && !Number.isNaN(projectDate.getTime());
+    const projectCategoryColor = categoryColors[project.category] ?? "from-slate-500 to-slate-700";
+
   return (
     <Card className={`group hover-lift glass-effect border-0 h-full relative overflow-hidden ${featured ? 'shadow-lg shadow-blue-200' : ''}`}>
         {featured === "TRUE" && (
@@ -35,7 +39,7 @@ export default function ProjectCard({
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
             ) : (
-                <div className={`w-full h-full bg-linear-to-br ${categoryColors[project.category]} opacity-80 flex items-center justify-center`}>
+                <div className={`w-full h-full bg-linear-to-br ${projectCategoryColor} opacity-80 flex items-center justify-center`}>
                 <span className="text-white text-2xl font-bold">
                     {project.title.split(' ').map((word: string) => word[0]).join('').slice(0, 2)}
                 </span>
@@ -48,13 +52,13 @@ export default function ProjectCard({
             <div className="flex items-start justify-between gap-2 mb-2">
                 <Badge 
                     variant="secondary"
-                    className={`mb-2 bg-linear-to-r ${categoryColors[project.category]} text-white`}>
+                    className={`mb-2 bg-linear-to-r ${projectCategoryColor} text-white`}>
                     {project.category}
                 </Badge>
-                {project.completion_date && (
+                {hasValidProjectDate && (
                     <div className="flex items-center gap-1 text-xs text-slate-500">
                         <Calendar className="w-3 h-3" />
-                        {format(new Date(project.completion_date), 'MM yyyy')}
+                        {format(projectDate!, 'MM yyyy')}
                     </div>
                 )} 
             </div>
